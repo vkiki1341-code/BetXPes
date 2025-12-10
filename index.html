@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="BetXPesa" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#1e293b" />
+    
+    <title>BetXPesa</title>
+    <meta name="description" content="BetXPesa: Live sports betting with competitive odds on football matches" />
+    <meta name="author" content="BetXPesa" />
+    <meta name="keywords" content="sports betting, football, live odds, betting platform" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BetXPesa - Sports Betting Platform" />
+    <meta property="og:description" content="BetXPesa: Live sports betting with competitive odds on football matches" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://betxpesa.app" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BetXPesa - Sports Betting Platform" />
+    <meta name="twitter:description" content="Live sports betting with competitive odds on football matches" />
+
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <!-- Additional iOS Support -->
+    <link rel="mask-icon" href="/favicon.ico" color="#1e293b" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="application-name" content="BetXPesa" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="msapplication-TileColor" content="#1e293b" />
+    <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration for PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            console.log('Service Worker registered:', registration);
+          }).catch(err => {
+            console.log('Service Worker registration failed:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

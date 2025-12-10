@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 215 28% 10%;
+    --foreground: 0 0% 100%;
+
+    --card: 215 25% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 215 25% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 158 64% 52%;
+    --primary-foreground: 215 28% 10%;
+
+    --secondary: 215 20% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 20% 25%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 280 65% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 158 64% 52%;
+
+    --radius: 0.5rem;
+
+    --bet-card: 215 22% 18%;
+    --bet-button: 215 20% 28%;
+    --bet-button-hover: 215 20% 35%;
+    --balance-border: 158 64% 52%;
+    --time-slot: 215 20% 20%;
+    --time-slot-active: 0 0% 100%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 215 28% 10%;
+
+    --card: 0 0% 97%;
+    --card-foreground: 215 28% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 28% 10%;
+
+    --primary: 158 64% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 20% 90%;
+    --secondary-foreground: 215 28% 10%;
+
+    --muted: 215 20% 80%;
+    --muted-foreground: 215 20% 40%;
+
+    --accent: 280 65% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 85%;
+    --input: 215 20% 90%;
+    --ring: 158 64% 52%;
+
+    --bet-card: 0 0% 95%;
+    --bet-button: 215 20% 88%;
+    --bet-button-hover: 215 20% 82%;
+    --balance-border: 158 64% 52%;
+    --time-slot: 215 20% 90%;
+    --time-slot-active: 215 28% 10%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
